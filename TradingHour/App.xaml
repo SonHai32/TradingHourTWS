@@ -1,0 +1,21 @@
+<Application x:Class="TradingHour.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:TradingHour" xmlns:converter="clr-namespace:TradingHour.Helpers.Converters" StartupUri="Views/MainPage.xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/AdonisUI;component/ColorSchemes/Light.xaml">
+                </ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/AdonisUI.ClassicTheme;component/Resources.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <converter:DateTimeToDateConverter x:Key="DateTimeToDateConverter" />
+            <converter:TradingHourTypeToColorConverter x:Key="TradingHourTypeToColorConverter" />
+            <converter:LogMessageColorConverter x:Key="LogMessageColorConverter" />
+            <converter:DisplayUpdateTimeConverter x:Key="DisplayUpdateTimeConverter" />
+            <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <converter:WeeklyTradingHourColorConverter x:Key="WeeklyTradingHourColorConverter" />
+            <converter:TradingHoursHightlightTextConverter x:Key="TradingHoursHightlightTextConverter" />
+            <converter:IntToStringConverter x:Key="IntToStringConverter" />
+            <converter:CountDownConverter x:Key="CountDownConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
